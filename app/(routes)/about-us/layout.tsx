@@ -3,7 +3,8 @@ import ShopFontLayout from '@/app/(routes)/_parts/ShopFontLayout';
 
 export const metadata: Metadata = {
     title: 'About Us',
-    description: ''
+    description: '',
+    keywords: []
 };
 
 export default function RootLayout({

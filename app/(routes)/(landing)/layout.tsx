@@ -1,25 +1,27 @@
-import type { Metadata } from 'next'
-import { Merriweather } from 'next/font/google'
-import '@/app/styles/globals.css'
+import type {Metadata} from 'next';
+import {Open_Sans} from 'next/font/google';
+import '@/app/styles/globals.css';
 
-const font = Merriweather({ subsets: ['latin'], weight: ["300", "400", "700"] })
+const font = Open_Sans({subsets: ['latin'], weight: ['300', '500', '800']});
 
 export const metadata: Metadata = {
-  title: 'Landing',
-  description: '',
-}
+    title: 'Картины на дереве в стиле лофт, Украина',
+    description: 'Интернет магазин картин на дереве ручной работы',
+    keywords: 'интернет-магазин картин, украинские картины, картины для интерьера, картины на дереве, картины на досках, doshki.com, doshki.kom, картины украина, деревянные картины',
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
+export default function LandingLayout({
+                                          children
+                                      }: {
+    children: React.ReactNode
 }) {
-  return (
-      <div className={font.className}>
-          <div>Landing Layout</div>
-          <div>
-              {children}
-          </div>
-      </div>
-  )
+    return (
+        <div className={font.className}>
+        {/*<div>*/}
+            <div>Landing Layout</div>
+            <div>
+                {children}
+            </div>
+        </div>
+    );
 }
