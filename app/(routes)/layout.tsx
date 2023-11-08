@@ -5,7 +5,7 @@ import '@/app/styles/reset.scss';
 export default function RootLayout({children}: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <body>
+        <body className="scrollStylesRD">
         <div>General Layout</div>
         <div>
             {children}
