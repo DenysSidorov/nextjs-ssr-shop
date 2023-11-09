@@ -14,7 +14,7 @@ import Link from 'next/link';
 let isOpen = false;
 const number1 = '+3809366677755'
 
-export default function LandingPage() {
+export default async function LandingPage() {
 
 
     // const serviceReducer: IServiceReducer = useSelector(selectServiceReducer);

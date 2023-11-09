@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import ShopFontLayout from '@/app/(routes)/_parts/ShopFontLayout';
+import ShopLayout from '@/app/(routes)/_parts/ShopLayout';
 
 export const metadata: Metadata = {
     title: 'About Us',
@@ -13,11 +13,11 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <ShopFontLayout>
+        <ShopLayout>
             <div>About Us Layout</div>
             <div>
                 {children}
             </div>
-        </ShopFontLayout>
+        </ShopLayout>
     );
 }
