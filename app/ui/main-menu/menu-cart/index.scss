@@ -1,0 +1,26 @@
+.main-cart {
+  cursor: pointer;
+  padding: 8px 0;
+  .main-cart__ico {
+    color: #2EA9FD;
+    font-size: 2.2rem;
+    margin-left: 15px;
+    transition: 0.4s;
+    &:hover {
+      transform: rotate(7deg);
+      color: #fff1d9;
+    }
+    &:after {
+      color: black;
+      color: black;
+      display: inline;
+      content: attr(data-js_count);
+      font-size: 16px;
+      margin-left: 5px;
+      padding: 3px 5px;
+      background-color: white;
+      border-radius: 13px;
+      font-family: 'Roboto-Medium';
+    }
+  }
+}
