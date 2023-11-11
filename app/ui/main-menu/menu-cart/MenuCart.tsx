@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import './index.scss';
 import Link from 'next/link';
+import {FaShopify} from 'react-icons/fa';
 // import {ICartReducerItem} from '../../../redux/reducers/cart-reducer/cartReducer';
 // import {selectCartItems} from '../../../redux/reducers/cart-reducer/selectors';
 
@@ -11,8 +12,8 @@ const MenuCart: FC = () => {
   //   count += el.count;
   // });
   return (
-    <Link href='/order' className='main-cart'>
-      <i className='fa fa-shopping-cart main-cart__ico' data-js_count={count} />
+    <Link href='/order' className='main-cart' data-js_count={count}>
+        <FaShopify className='main-cart__ico' />
     </Link>
   );
 };

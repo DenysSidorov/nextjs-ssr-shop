@@ -1,13 +1,14 @@
 import React, {FC} from 'react';
 import './index.scss';
 import Link from 'next/link';
+import {FaCartArrowDown, FaInstagram, FaShopify, FaStream} from 'react-icons/fa';
 
 const SocialMedia: FC = () => {
   return (
     <div className='socialMedia__container'>
       <div className='fab'>
         <span className='fab-action-button'>
-          <i className='fab-action-button__icon' />
+          <FaStream className='fab-action-button__icon'/>
         </span>
         <ul className='fab-buttons'>
           <li className='fab-buttons__item'>
@@ -18,17 +19,17 @@ const SocialMedia: FC = () => {
               data-tooltip='Instagram'
               rel='noreferrer'
             >
-              <i className='fa fa-instagram main-cart__ico' />
+              <FaInstagram />
             </a>
           </li>
           <li className='fab-buttons__item'>
             <Link href='/shop' className='fab-buttons__link' data-tooltip='Главная'>
-              <i className='fa fa-home main-cart__ico' />
+              <FaShopify />
             </Link>
           </li>
           <li className='fab-buttons__item'>
             <Link href='/order' className='fab-buttons__link' data-tooltip='Корзина'>
-              <i className='fa fa-shopping-cart main-cart__ico' />
+              <FaCartArrowDown />
             </Link>
           </li>
         </ul>

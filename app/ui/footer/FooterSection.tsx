@@ -1,5 +1,7 @@
 import './index.scss';
 import Link from 'next/link';
+import {FaInstagram, FaPhoneAlt} from 'react-icons/fa';
+
 
 const FooterSection = () => {
   // const number1 = useSelector(selectServiceNumber1);
@@ -15,15 +17,9 @@ const FooterSection = () => {
           </div>
           <div className='footerMainBlock__phones'>
             <span className='menu_one_telFooter'>
-              <i className='fa fa-mobile' aria-hidden='true' />
+              <FaPhoneAlt />
               <a href={`tel:+${number1}`}>{number1}</a>
             </span>
-            {/*        <span className="menu_one_telFooter"> */}
-            {/*    <i className="fa fa-mobile" aria-hidden="true"> */}
-
-            {/*    </i> */}
-            {/*    <a href="tel:+0679083278">067-908-32-78</a> */}
-            {/* </span> */}
           </div>
 
           <div className='footerMainBlock__titles'>
@@ -32,12 +28,8 @@ const FooterSection = () => {
             <div className='strip_double' />
           </div>
           <div className='footerMainBlock__socials'>
-            {/* <span className="menu_one_soc"><i className="fa fa-facebook" aria-hidden="true"></i></span> */}
-            {/* <span className="menu_one_soc"><i className="fa fa-twitter" aria-hidden="true"></i></span> */}
-            {/* <span className="menu_one_soc"><i className="fa fa-google-plus" aria-hidden="true"></i></span> */}
-            {/* <span className="menu_one_soc"><i className="fa fa-vk" aria-hidden="true"></i></span> */}
             <a href='https://www.instagram.com/doshki.kom/' target='_blank' className='menu_one_soc' rel='noreferrer'>
-              <i className='fa fa-instagram' aria-hidden='true' />
+              <FaInstagram />
             </a>
           </div>
 
