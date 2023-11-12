@@ -6,10 +6,10 @@ import TagsMainSection from '../../modules/tags-main-section/TagsMainSection';
 import MenuInfoSection from '../../modules/menu-info-section/MenuInfoSection';
 import Pagination from '../../modules/pagination/Pagination';
 // import {setMetaTag, setTitle} from '../../../helpers/libs/utils';
-import HeadBanner from '../../modules/head-banner/HeadBanner';
 import SimilarGoodsSection from '../../modules/similar-goods-section/SimilarGoodsSection';
 import HomePageSpinner from '@/app/components/home-page-spinner/HomePageSpinner';
 import LinksToImages from '@/app/components/links-to-images/LinksToImages';
+import HeadBanner from '@/app/components/head-banner/HeadBanner';
 // import {getGoodsAPI, getPopularGoodsAPI, getUniqCategoriesInGoodsAPI} from '../../../api/endpoints';
 
 

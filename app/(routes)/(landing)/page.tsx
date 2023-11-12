@@ -12,7 +12,7 @@ import Link from 'next/link';
 // import {selectServiceReducer} from '../../../redux/reducers/service-app/selectors';
 
 let isOpen = false;
-const number1 = '+3809366677755'
+const number1 = '+3809366677755';
 
 export default async function LandingPage() {
 
