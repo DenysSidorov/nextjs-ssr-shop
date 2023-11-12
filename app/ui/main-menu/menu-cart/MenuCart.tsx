@@ -6,7 +6,7 @@ import {FaShopify} from 'react-icons/fa';
 // import {selectCartItems} from '../../../redux/reducers/cart-reducer/selectors';
 
 const MenuCart: FC = () => {
-  let count = 12;
+  let count = 0;
   // const cartItems: Array<ICartReducerItem> = useSelector(selectCartItems);
   // cartItems.forEach((el: ICartReducerItem) => {
   //   count += el.count;
