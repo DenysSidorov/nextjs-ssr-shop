@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import {Button} from '@/app/ui/button';
+import {Metadata} from 'next';
+
+export const metadata: Metadata = {
+    title: 'About Us',
+    description: '',
+    keywords: []
+};
 
 export default function Home() {
   return (

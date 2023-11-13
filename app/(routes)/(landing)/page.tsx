@@ -4,6 +4,7 @@
 import './landing.scss';
 // import './hoverBlock.less';
 import Link from 'next/link';
+import {Metadata} from 'next';
 
 // import {setMetaTag, setTitle} from '../../../helpers/libs/utils';
 // import BuyBtn from './buy-btn';
@@ -13,6 +14,12 @@ import Link from 'next/link';
 
 let isOpen = false;
 const number1 = '+3809366677755';
+
+export const metadata: Metadata = {
+    title: 'Картины на дереве в стиле лофт, Украина',
+    description: 'Интернет магазин картин на дереве ручной работы',
+    keywords: 'интернет-магазин картин, украинские картины, картины для интерьера, картины на дереве, картины на досках, doshki.com, doshki.kom, картины украина, деревянные картины',
+};
 
 export default async function LandingPage() {
 

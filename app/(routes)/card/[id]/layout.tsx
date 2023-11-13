@@ -1,11 +1,6 @@
 import type {Metadata} from 'next';
 import ShopLayout from '@/app/(routes)/_parts/ShopLayout';
 
-export const metadata: Metadata = {
-    title: 'Card with id',
-    description: ''
-};
-
 export default function RootLayout({
                                        children
                                    }: {
