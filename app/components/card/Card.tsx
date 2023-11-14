@@ -6,7 +6,7 @@ import './index.scss';
 import {checkTextLength} from '@/app/services/string-transforms';
 import Link from 'next/link';
 import {ICartItem} from '@/app/services/interfaces';
-import OneClickModal from '@/app/ui/modals/one-click-modal/OneClickModal';
+// import OneClickModal from '@/app/ui/modals/one-click-modal/OneClickModal';
 
 interface ICardMainPage {
   card: ICartItem;
@@ -14,7 +14,12 @@ interface ICardMainPage {
 }
 
 const CardMainPage = ({card, width}: ICardMainPage) => {
-  const [isShowOneClickModal, setIsShowOneClickModal] = useState(false);
+  // const [isShowOneClickModal, setIsShowOneClickModal] = useState(false);
+  const [isShowOneClickModal, setIsShowOneClickModal] = [false, (item:any)=>{
+    if (1<2){
+      console.log(item);
+    }
+  }]
   // const dispatch = useDispatch();
   const pushToCart = (item: any) => {
     if (1<2){
@@ -100,7 +105,7 @@ const CardMainPage = ({card, width}: ICardMainPage) => {
         </div>
       ) : null}
 
-      {isShowOneClickModal && <OneClickModal close={handleShowOneClick} goods={[card]} willDeleteGoods={false} />}
+      {/*{isShowOneClickModal && <OneClickModal close={handleShowOneClick} goods={[card]} willDeleteGoods={false} />}*/}
     </div>
   );
 };

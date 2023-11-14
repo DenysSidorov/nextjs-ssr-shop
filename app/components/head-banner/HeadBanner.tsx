@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import './index.less';
+import './index.scss';
 
 const HeadBanner: FC = () => {
   return (

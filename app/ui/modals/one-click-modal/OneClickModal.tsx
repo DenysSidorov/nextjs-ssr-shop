@@ -1,4 +1,5 @@
 // @ts-nocheck
+"use client"
 import React, {ChangeEvent, FC, useState} from 'react';
 import InputMask from 'react-input-mask';
 import './index.scss';
