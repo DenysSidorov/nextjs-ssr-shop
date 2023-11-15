@@ -86,10 +86,17 @@ const CardMainPage = ({card, width}: ICardMainPage) => {
         {/* {card.isExists ? <div className="oneCardItem__bottomCard__status">В наличии</div> */}
         {/*: <div className="oneCardItem__bottomCard__status red">Нет в наличии</div>} */}
         <div className='oneCardItem__bottomCard__buy'>
-          <span onClick={() => addItem(card)}>В корзину</span>
+          <span
+              // onClick={() => addItem(card)}
+          >В корзину
+          </span>
         </div>
         <div className='oneCardItem__bottomCard__buy_fast'>
-          <span onClick={handleShowOneClick}>Заказ в 1 клик</span>
+          <span
+              // onClick={handleShowOneClick}
+          >
+            Заказ в 1 клик
+          </span>
         </div>
       </div>
 

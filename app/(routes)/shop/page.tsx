@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     description: ''
 };
 
+async function getData() {
+    const response = await fetch('http://localhost:8001/api/goods');
+    console.log('response', response);
+    return response.json();
+}
+
 const Home = () => {
     const cardsState: any[] = [];
     const popularCardsState: any[] = [];
