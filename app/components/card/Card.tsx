@@ -46,7 +46,7 @@ const CardMainPage = ({card, width}: ICardMainPage) => {
 
   return (
     <div className='bodyCardItems__oneCardItem' style={{width: width || ''}}>
-      <Link href={`/card/${card._id}`}>
+      <Link href={`/card/${card.id}`}>
         <div className='oneCardItem__headCard'>
           <div className='oneCardItem__headCard__priceCard'>
             <span>
@@ -80,7 +80,7 @@ const CardMainPage = ({card, width}: ICardMainPage) => {
       </Link>
 
       <div className='oneCardItem__bottomCard'>
-        <Link href={`/card/${card._id}`} className='oneCardItem__bottomCard__shortText'>
+        <Link href={`/card/${card.id}`} className='oneCardItem__bottomCard__shortText'>
           <span className='oneCardItem__bottomCard__shortText_dots'>{card['desc-short']}</span>
         </Link>
         {/* {card.isExists ? <div className="oneCardItem__bottomCard__status">В наличии</div> */}

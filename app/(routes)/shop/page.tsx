@@ -19,13 +19,19 @@ export const metadata: Metadata = {
 };
 
 async function getData() {
-    const response = await fetch('http://localhost:8001/api/goods');
-    console.log('response', response);
+    const response: Response = await fetch('http://localhost:8001/api/goods', {
+        next: {
+            revalidate: 5 // sec, how often to ask db, otherwise use cache
+        }
+    });
     return response.json();
 }
 
-const Home = () => {
-    const cardsState: any[] = [];
+const Home = async () => {
+    let cardsState: any[] = [];
+    const response = await getData();
+    console.log('response->', response);
+    cardsState = response;
     const popularCardsState: any[] = [];
     const uniqCategoryState: any[] = [];
     const paginationPageActiveState = 1;

@@ -18,7 +18,7 @@ const CardsSection: FC<ICardsSection> = ({count, cards}) => {
           <div className='productsCardBlock__searchCard-count'>Найдено : {count}</div>
           <div className='productsCardBlock__bodyCardItems'>
             {cards.map((el: any) => (
-              <CardMainPage card={el} key={el._id} />
+              <CardMainPage card={el} key={el.id} />
             ))}
           </div>
         </div>

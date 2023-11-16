@@ -1,5 +1,5 @@
 export interface ICartItem {
-    _id: number;
+    id?: number;
     name: string;
     model: string;
     size: number[];
