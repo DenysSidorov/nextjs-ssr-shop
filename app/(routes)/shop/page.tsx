@@ -21,16 +21,19 @@ export const metadata: Metadata = {
 async function getData() {
     const response: Response = await fetch('http://localhost:8001/api/goods', {
         next: {
-            revalidate: 5 // sec, how often to ask db, otherwise use cache
+            revalidate: 1 // sec, how often to ask db, otherwise use cache
         }
     });
+
+    if (!response.ok) {
+        throw new Error('Could not fetch data');
+    }
     return response.json();
 }
 
 const Home = async () => {
     let cardsState: any[] = [];
     const response = await getData();
-    console.log('response->', response);
     cardsState = response;
     const popularCardsState: any[] = [];
     const uniqCategoryState: any[] = [];
