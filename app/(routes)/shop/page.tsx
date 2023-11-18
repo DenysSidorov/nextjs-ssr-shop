@@ -13,10 +13,28 @@ import CardsSection from '@/app/ui/cards-section/CardsSection';
 import {Metadata} from 'next';
 // import {getGoodsAPI, getPopularGoodsAPI, getUniqCategoriesInGoodsAPI} from '../../../api/endpoints';
 
-export const metadata: Metadata = {
-    title: 'Shop',
-    description: ''
-};
+type Props = {
+    params: {
+        id: string;
+    }
+}
+
+export async function generateMetadata({params: {id}}: Props): Promise<Metadata> {
+    const sort = false;
+    if (sort) {
+        return {
+            title: `Картины на дереве - ${sort}`,
+            keywords: `интернет-магазин картин, украинские картины, картины для интерьера, картины на дереве, картины на досках, doshki.com, картины украина, деревянные картины ${sort}`,
+            description: 'деревяные картины в украине, интернет-магазин картин, украинские картины, картины для интерьера, картины на дереве, картины на досках, doshki.com, картины украина, деревянные картины'
+        }
+    } else {
+        return {
+            title: `Картины на дереве`,
+            keywords: 'интернет-магазин картин, украинские картины, картины для интерьера, картины на дереве, картины на досках, doshki.com, doshki.kom, картины украина, деревянные картины',
+            description: '\'деревяные картины в украине, интернет-магазин картин, украинские картины, картины для интерьера, картины на дереве, картины на досках, doshki.com, картины украина, деревянные картины;'
+        }
+    }
+}
 
 async function getData() {
     const response: Response = await fetch('http://localhost:8001/api/goods', {
