@@ -9,10 +9,13 @@ interface ParametersI {
 }
 
 // read parameters from path [id] /    headers   /    cookies
-export async function GET(req: Request, { params }: ParametersI) {
+export async function GET(request: Request, { params }: ParametersI) {
     const id = params?.id;
     const headersList = headers();
     const cookiesList = cookies();
+    // @ts-ignore
+    const cookiesList2 = request?.cookies.get('token'); // second solution for getting cookies
+    const headersList2 = request?.headers; // second solution for getting headers
 
     const contentType = headersList.get("Content-Type");
     const cookie = cookiesList.get("Cookie_name")?.value;
@@ -22,6 +25,6 @@ export async function GET(req: Request, { params }: ParametersI) {
     if (id === 'redirect') {
         redirect('https://nextjs.org/');
     } else {
-        return NextResponse.json({ id, cookie, contentType, API_KEY });
+        return NextResponse.json({ id, cookie, contentType, API_KEY, cookiesList2: cookiesList2?.toString(), headersList2: headersList2?.toString() });
     }
 }
